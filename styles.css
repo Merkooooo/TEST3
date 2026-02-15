@@ -70,16 +70,18 @@ header {
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
+    gap: 60px;
 }
 
 .logo {
     font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: 1px;
+    white-space: nowrap;
 }
 
 .logo span {
@@ -107,7 +109,7 @@ nav {
     height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1541913057-a725dad7677d?auto=format&fit=crop&q=80&w=2000') center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2000') center/cover;
     color: var(--white);
     text-align: center;
 }
