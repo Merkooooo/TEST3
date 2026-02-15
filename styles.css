@@ -1,4 +1,4 @@
-:root {
+﻿:root {
     --primary: #1a1a1a;
     --secondary: #c5a059;
     /* Elegant Gold */
@@ -428,4 +428,65 @@ footer {
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* --- MOBILE ADAPTATION --- */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        background: var(--secondary) !important;
+        color: var(--white) !important;
+    }
+
+    #sidebar {
+        position: fixed !important;
+        top: 0;
+        left: -280px !important;
+        width: 280px !important;
+        height: 100vh !important;
+        background: var(--primary) !important;
+        z-index: 1500 !important;
+        transition: transform 0.4s ease !important;
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 80px 30px !important;
+    }
+
+    #sidebar.active {
+        transform: translateX(280px) !important;
+    }
+
+    section,
+    footer {
+        margin-left: 0 !important;
+        padding: 60px 20px !important;
+    }
+
+    .hero {
+        text-align: center !important;
+        padding-left: 20px !important;
+        justify-content: center !important;
+        align-items: center !important;
+        height: auto !important;
+        min-height: 100vh !important;
+        background-position: center !important;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem !important;
+        text-align: center !important;
+    }
+
+    .hero p {
+        text-align: center !important;
+        margin: 0 auto 30px !important;
+    }
+
+    .contact-container,
+    .services-grid,
+    .project-grid {
+        grid-template-columns: 1fr !important;
+    }
 }
