@@ -73,6 +73,8 @@ nav {
     justify-content: flex-start;
     align-items: center;
     width: 100%;
+    padding: 0 5%;
+    /* Shifted towards left but with some breathing room */
     gap: 60px;
 }
 
