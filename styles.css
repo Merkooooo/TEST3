@@ -54,27 +54,29 @@ section {
     padding: 100px 0;
 }
 
-/* Header */
+/* Sidebar Navigation */
 header {
-    height: 90px;
-    display: flex;
-    align-items: center;
+    width: 280px;
+    height: 100vh;
     position: fixed;
     top: 0;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(10px);
+    left: 0;
+    background: var(--primary);
+    color: var(--white);
+    padding: 60px 40px;
     z-index: 1000;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 nav {
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
-    padding: 0 5%;
-    /* Shifted towards left but with some breathing room */
     gap: 60px;
 }
 
@@ -84,36 +86,61 @@ nav {
     font-weight: 700;
     letter-spacing: 1px;
     white-space: nowrap;
+    margin-bottom: 20px;
 }
 
 .logo span {
     color: var(--secondary);
+    display: block;
+    /* Stack on mobile/sidebar if needed */
 }
 
 .nav-links {
     display: flex;
-    gap: 40px;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .nav-links a {
+    color: rgba(255, 255, 255, 0.7);
     font-size: 0.9rem;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
+    transition: var(--transition);
 }
 
 .nav-links a:hover {
     color: var(--secondary);
+    padding-left: 10px;
 }
 
-/* Hero Section */
+/* Adjust sections for sidebar */
+section,
+footer {
+    margin-left: 280px;
+}
+
+/* Hero Section Refined */
 .hero {
     height: 100vh;
     display: flex;
     align-items: center;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2000') center/cover;
     color: var(--white);
-    text-align: center;
+    text-align: left;
+    padding-left: 10%;
+}
+
+.hero h1 {
+    font-size: 5rem;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    text-align: left;
+    margin-left: 0;
 }
 
 .hero h1 {
